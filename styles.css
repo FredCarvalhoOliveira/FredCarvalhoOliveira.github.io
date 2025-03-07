@@ -7,14 +7,89 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: rgb(25, 25, 25);
+    color: #f4f4f4;
+}
+
+/* Container for sidebar and main content */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 280px;
+    background-color: rgb(30, 30, 30);
+    padding: 2rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid rgb(50, 50, 50);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(50, 50, 50);
+    margin-bottom: 1rem;
+}
+
+.profile h2 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.job-title {
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #aaa;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+    margin-left: 280px; /* Same as sidebar width */
 }
 
 header {
-    background-color: #333;
+    background-color: rgb(35, 35, 35);
     padding: 1rem;
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -28,21 +103,26 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #ccc;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
 }
 
 main {
-    margin-top: 60px;
+    padding: 2rem;
 }
 
 section {
-    padding: 4rem 2rem;
-    min-height: 100vh;
+    padding: 3rem 0;
+    min-height: 80vh;
+    border-bottom: 1px solid rgb(50, 50, 50);
 }
 
 #home {
-    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,24 +137,52 @@ section {
 }
 
 .project-card {
-    background-color: #f4f4f4;
-    padding: 1rem;
+    background-color: rgb(35, 35, 35);
+    padding: 1.5rem;
     border-radius: 5px;
+    transition: transform 0.3s;
 }
 
-.social-links {
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card a {
+    display: inline-block;
     margin-top: 1rem;
-}
-
-.social-links a {
-    margin-right: 1rem;
-    color: #333;
+    color: #4d94ff;
     text-decoration: none;
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: rgb(35, 35, 35);
+    color: #ccc;
     text-align: center;
     padding: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1.5rem;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 1rem;
+    }
 } 
