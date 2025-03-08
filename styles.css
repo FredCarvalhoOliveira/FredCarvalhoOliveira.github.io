@@ -235,4 +235,118 @@ footer {
     .project-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
+}
+
+/* Project detail page */
+#project-detail {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-button {
+    background-color: rgb(40, 40, 40);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+.project-header {
+    margin-bottom: 2rem;
+}
+
+.project-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.project-header .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-header .tag {
+    background-color: rgb(60, 60, 60);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.project-description {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.project-image-full {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-section {
+    margin-bottom: 2rem;
+}
+
+.project-section h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.project-section p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.project-section ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-section li {
+    margin-bottom: 0.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.project-links a {
+    display: inline-block;
+    background-color: rgb(50, 50, 50);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-links a:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+.error-message {
+    text-align: center;
+    padding: 3rem;
+}
+
+.error-message h2 {
+    color: #ff6b6b;
+    margin-bottom: 1rem;
 } 
